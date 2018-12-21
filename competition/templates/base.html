@@ -1,0 +1,16 @@
+<html>
+<head>
+<title>Foosball Leaderboard</title>
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+</head>
+<body style="background-image: url(https://pictures.topspeed.com/IMG/jpg/201005/special-edition-audi-6.jpg)">
+<a href="{% url 'home' %}" class="btn" >
+<h1 style="color:black"><center>Foosball Leaderboard</center></h1>
+</a>
+    <div class="container main-block" style="color:black" >
+        {% block content %}
+        {% endblock content %}
+    </div>
+</body>
+</html>

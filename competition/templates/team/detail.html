@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+
+{% load static %}
+{% block content %}
+
+<h1>{{ content.team.player1 }} , {{ content.team.player2 }} </h1>
+<br>
+<h3>Foosball Points: {{ content.team.foosball_points }}</h3>
+<p>Matches played
+	<ul>
+		{% for match in content.matches %}
+		<li>{{ match.team1 }} vs {{ match.team2 }}</li>
+		<p>{{ match.team1_score }} - {{ match.team2_score }}</p>
+		{% endfor %}
+	</ul>
+</p>
+
+{% endblock %}

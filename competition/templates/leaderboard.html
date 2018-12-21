@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% load static %}
+{% block content %}
+<table class="table">
+	<thead>
+		<tr class="info" style="color:black">
+			<th style="color:black">Team</th>
+			<th style="color:black">Points</th>
+			
+		</tr>
+	</thead>
+	{% for team in teams %}
+	<tbody>
+		<tr>
+		<td style="color:black">
+			<a href="{% url 'team-detail' team.id %}" style="color:black"><b>{{ team.player1 }}, {{ team.player2 }}</b></a> 
+		</td>
+		<td>
+			
+			<b>{{ team.foosball_points }}</b>
+			
+		</td>
+		</tr>
+	</tbody>
+{% endfor %}
+
+{% endblock %}
